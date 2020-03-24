@@ -17,4 +17,14 @@ document.body.innerHTML = output;
 };
 
 
-getPosts();
+createPost = (post , callback) => { 
+setTimeout(() => {
+posts.push(post);
+callback();
+
+}, 2000);
+};
+
+
+
+createPost( {title:'Post Three', body: ' This is post three'}, getPosts);
